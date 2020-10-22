@@ -29,3 +29,6 @@ crear enlace simbolico ----> ln -s /etc/nginx/sites-available/proyect01 /etc/ngi
 Reiniciar ---> service nginx restart
 Eliminar Archivos ---->  rm -f /etc/nginx/sites-enabled/project01
 instalar --> apt install nginx
+
+*** Cargar estaticos ***
+python manage.py collectstatic --settings=project01.settings.prod

@@ -27,6 +27,8 @@ STATIC_URL = '/static/'
 
 #cargango archivos estaticos
 STATICFILES_DIRS = [BASE_DIR.child('static')]
+#necesario para los estaticos de produccion
+STATIC_ROOT = BASE_DIR.child('staticfiles')
 
 MEDIA_URL = '/media/'
 
