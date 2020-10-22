@@ -1,0 +1,31 @@
+*** postgresql ***
+instalar postgresql  -->  sudo apt install postgresql postgresql-contrib
+instalar controlador de bd --> pip install pysopg2-binary
+
+--Crear base de datos
+-su postgres
+-createdb nombre_db
+-crateuser nombre
+psql nombre_db
+alter user nombre with password 'pass';
+/q
+exit
+
+*** Unicorn ***
+gunicorn_start pegar en caprpetaprojects/entorno/bin/
+
+*** supervisor ***
+project01.conf pegar en /etc/supervisor/conf.d/ 
+-- comandos de supervisor
+crear log --> touch log.txt en la ruta especificada en el archifo .conf
+reiniciar -->  supervisorctl restart project01
+instalar --> apt install supervisor
+
+*** nginx ***
+
+-- comandos de nginx
+
+crear enlace simbolico ----> ln -s /etc/nginx/sites-available/proyect01 /etc/nginx/sites-enabled/project01
+Reiniciar ---> service nginx restart
+Eliminar Archivos ---->  rm -f /etc/nginx/sites-enabled/project01
+instalar --> apt install nginx

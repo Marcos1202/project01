@@ -1,0 +1,33 @@
+upstream project01 {
+  server unix:/django3.1Apps/django3.1/run/gunicorn.sock fail_timeout=0;
+}
+ 
+server {
+ 
+    listen   80;
+
+    server_name 192.168.0.15;
+ 
+    access_log /django3.1Apps/django3.1/logs/nginx-access.log;
+    error_log /django3.1Apps/django3.1/logs/nginx-error.log;
+ 
+    location /static/ {
+        alias   /django3.1Apps/django3.1/project01/static/;
+    }
+    
+    location /media/ {
+        alias   /django3.1Apps/django3.1/project01/media/;
+    }
+ 
+    location / {
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_redirect off;
+
+        if (!-f $request_filename) {
+            proxy_pass http://project01;
+            break;
+        }
+    }
+}
+

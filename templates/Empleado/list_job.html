@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+   Empleados del area
+{% endblock title %}
+
+{% block contenent %}
+   <h1>Empleados del area</h1>
+   <p>{{object_list}}</p>
+   {% if object_list %}
+      {%for job in object_list%}
+         <li> {{job}}</li>
+      {%endfor%}
+   {% else %}
+      <h3>El &aacute;rea no cuenta con empleados registrados</h3>
+   {% endif %}
+{% endblock contenent %}

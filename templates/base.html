@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{%static 'css/foundation.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/app.css'%}">
+    
+    <title>
+        {%block title%}
+        {%endblock title%}
+    </title>
+</head>
+<body>
+    {% include 'includes/header.html' %}
+    {% block contenent %}      
+    {% endblock contenent %}
+    
+    <script src="{% static 'js/vendor/jquery.js' %}"></script>
+    <script src="{% static 'js/vendor/foundation.min.js' %}"></script>
+    <script src="{% static 'js/vendor/what-input.js' %}"></script>
+    <script>
+      $(document).foundation();
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}
+    {{object.first_name}}
+{% endblock title %}
+
+{% block contenent %}
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x align-center">
+            <div class="cell large-4 card" style="width: 300px; margin-top: 10px;">
+                <div class="card-divider centro">
+                  <h1>{{empleado.get_job_display}}</h1>
+                </div>
+                
+                {% if empleado.image %}
+                    <img src="{{empleado.image.url}}">
+                {% else %}
+                    <img src="{% static 'img/siete.jpg' %}">
+                {% endif %}
+                    
+                <div class="card-section">
+                  <h4>{{empleado.full_name}}</h4>
+                  <p>{{empleado.first_name}}</p>
+                  <p>Posici&oacute;n: <b> {{empleado.departamento_id.shor_name}}</b></p>
+                  <p> <span class="label">Habilidades: </span></p>
+                  <ul class="vertuical menu">
+                      {% for h in empleado.habilidades.all %}
+                        <li>{{h.habilidad}}</li>
+                      {% endfor %}      
+                  </ul>
+                </div>
+              </div>
+
+            
+            <!-- recupera todo los valores del detai view
+            podemos usar object o el nombre de nuestro modelo -->
+           
+        </div>
+    </div>
+{%endblock%}

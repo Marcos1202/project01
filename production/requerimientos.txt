@@ -1,0 +1,8 @@
+pip install django
+pip install psycopg2 or pip install psycopg2-binary
+pip install unipath
+pip install django-ckeditor
+pip install  pillow
+
+##instalar postgres desde ubuntu
+apt-get install postgresql postgresql-contrib 

@@ -1,0 +1,26 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="{%static 'css/foundation.min.css'%}">
+    <title>Resumen Foundation</title>
+</head>
+<body>
+    <h1>Resumen Foundation</h1>
+    <!-- para crear un lienzo foundation usamos la clase grid-x -->
+    <div class="grid-x" style="border: 10px solid green  ">
+        <!-- clase cell es hija de grid -->
+        <!-- clase large representa pantallas grandes, el numero siguiente rpresenta 
+        la cantidad de celdas a rellenar -->
+        <h2 class="cell small-12 large-4">Elemento 1</h2>
+        <h2 class="cell small-12 large-4">Elemento 2</h2>
+        <h2 class="cell small-12 large-4">Elemento 3</h2>
+        <!-- ahora creamos un lienzo hijo -->
+        <div class="cell large-6 grid-x" style="border:10px solid green;">
+            <h2 class="cell large-4">Elemento que ocupa 4 columnas de un hijo</h2>
+            <h2 class="cell large-4">Elemento igual al anterior</h2>
+            <h2 class="cell large-4">Elemento igual</h2>
+        </div>
+    </div>
+</body>
+</html>
