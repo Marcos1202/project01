@@ -10,7 +10,7 @@ from .models import Departamento
 #FormView
 class NuevoDepartementoView(FormView):
     """NuevoDepartementoView definition."""
-    template_name = 'departamento/nuevo_departamento.html'
+    template_name = 'Departamento/nuevo_departamento.html'
     form_class = NuevoDepartamentoForm
     success_url = '.'
 
