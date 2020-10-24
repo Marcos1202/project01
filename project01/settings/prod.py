@@ -4,7 +4,7 @@ import os
 """ Util para podernos conectar desde el servidor """
 ALLOWED_HOSTS = ['*']
 
-DEBUG=True
+
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 

@@ -12,6 +12,8 @@ alter user nombre with password 'pass';
 exit
 
 *** Unicorn ***
+instalar Unicorn
+pip install gunicorn
 gunicorn_start pegar en caprpetaprojects/entorno/bin/
 
 *** supervisor ***
@@ -31,4 +33,4 @@ Eliminar Archivos ---->  rm -f /etc/nginx/sites-enabled/project01
 instalar --> apt install nginx
 
 *** Cargar estaticos ***
-python manage.py collectstatic --settings=project01.settings.prod
+python3 manage.py collectstatic --settings=project01.settings.prod
