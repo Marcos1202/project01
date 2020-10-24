@@ -12,7 +12,7 @@ server {
     error_log /django3.1Apps/django3.1/logs/nginx-error.log;
  
     location /static/ {
-        alias   /django3.1Apps/django3.1/project01/static/;
+        alias   /django3.1Apps/django3.1/project01/staticfieles/;
     }
     
     location /media/ {
