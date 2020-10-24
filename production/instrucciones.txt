@@ -24,7 +24,7 @@ instalar --> apt install supervisor
 *** nginx ***
 
 -- comandos de nginx
-
+pegar enlace simbolico ---> cp production/project01 /etc/nginx/sites-enabled/project01
 crear enlace simbolico ----> ln -s /etc/nginx/sites-available/project01 /etc/nginx/sites-enabled/project01
 Reiniciar ---> service nginx restart
 Eliminar Archivos ---->  rm -f /etc/nginx/sites-enabled/project01
